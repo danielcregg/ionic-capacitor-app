@@ -1,5 +1,5 @@
 {
-  "name": "labx-capacitor",
+  "name": "ionic-capacitor-app",
   "integrations": {
     "capacitor": {}
   },
