@@ -1,0 +1,7 @@
+{
+  "name": "labx-capacitor",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

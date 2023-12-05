@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button (click)="locateMe()">Find My Location</ion-button>
+  <p *ngIf="coordinates">Latitude: {{coordinates.latitude}}, Longitude: {{coordinates.longitude}}</p>
+</ion-content>
