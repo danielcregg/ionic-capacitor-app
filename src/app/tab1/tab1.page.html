@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Network Status
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -12,6 +12,15 @@
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  
+  <!-- Display the network status -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Network Status</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Connected: {{ networkStatus.connected ? 'Yes' : 'No' }}</p>
+      <p>Connection Type: {{ networkStatus.connectionType }}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
