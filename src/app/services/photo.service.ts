@@ -25,7 +25,7 @@ export class PhotoService {
     this.photos.unshift(savedImageFile);
 
     // Cache all photo data for future retrieval
-    Preferences.set({
+    await Preferences.set({
       key: this.PHOTO_STORAGE,
       value: JSON.stringify(this.photos),
     });
@@ -91,14 +91,14 @@ export class PhotoService {
     this.photos.splice(position, 1);
   
     // Update photos array cache by overwriting the existing photo array
-    Preferences.set({
+    await Preferences.set({
       key: this.PHOTO_STORAGE,
       value: JSON.stringify(this.photos)
     });
   
     // delete photo file from filesystem
     const filename = photo.filepath
-                        .substr(photo.filepath.lastIndexOf('/') + 1);
+                        .substring(photo.filepath.lastIndexOf('/') + 1);
   
     await Filesystem.deleteFile({
       path: filename,
